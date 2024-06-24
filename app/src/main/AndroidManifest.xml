@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AttendEase"
         tools:targetApi="31">
         <activity
+            android:name=".ScannerActivity"
+            android:exported="false" />
+        <activity
             android:name=".Student_Login_Activity"
             android:exported="false" />
         <activity
