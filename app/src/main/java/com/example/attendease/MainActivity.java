@@ -14,7 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button b;
+    private Button b,b1,b2;
+
     private ImageView imageView;
 
     @Override
