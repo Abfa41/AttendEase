@@ -1,6 +1,7 @@
 package com.example.attendease;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ public class ScannerActivity extends AppCompatActivity {
             return insets;
         });
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         // Start the QR code scanning
         new IntentIntegrator(this)
                 .setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
@@ -34,6 +37,7 @@ public class ScannerActivity extends AppCompatActivity {
                 .setCameraId(0)  // Use a specific camera of the device
                 .setBeepEnabled(true)
                 .setBarcodeImageEnabled(true)
+                .setOrientationLocked(false)
                 .initiateScan();
     }
 
