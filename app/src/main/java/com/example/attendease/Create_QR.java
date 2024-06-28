@@ -18,7 +18,7 @@ import java.util.Calendar;
 
 public class Create_QR extends AppCompatActivity {
 
-    private Button btnSelectTime,btnSelectTime2;
+    private TextView btnSelectTime,btnSelectTime2;
     private TextView txtSelectedEndTime, txtSelectedStartTime;
     private int selectedHour, selectedMinute;
 
