@@ -14,8 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button b;
+    private Button b,b1,b2;
     int i;
+
     private ImageView imageView;
 
     @Override
@@ -23,7 +24,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        b = findViewById(R.id.stutBut);
+        b1=findViewById(R.id.but1);
+        b2=findViewById(R.id.but2);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Host_Login_Activity.class));
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Student_Login_Activity .class));
+            }
+        });
+
+
         imageView = findViewById(R.id.logoImage);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
