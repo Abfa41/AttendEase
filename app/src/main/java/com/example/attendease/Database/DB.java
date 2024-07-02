@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.attendease.Model.Student;
+import com.example.attendease.Model.Teacher;
 
 import org.bson.Document;
 
@@ -73,6 +74,33 @@ public class DB {
             }
             else{
                 Toast.makeText(context, "Wrong Pin/Name/Phone...", Toast.LENGTH_SHORT).show();
+                i.set(0);
+            }
+        });
+        if(i.get()==1) return true;
+        return false;
+    }
+
+    public boolean ifTeacherExists(Teacher t){
+        AtomicInteger i = new AtomicInteger(0);
+        MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Teacher");
+        Document doc = new Document("pin",t.getTeacher_ID())
+                .append("name",t.getName())
+                .append("phone",t.getPhone());
+        mongoCollection.find(doc).iterator().getAsync(task -> {
+            if(task.isSuccess()){
+                if(task.get().hasNext()){
+                    Toast.makeText(context, "Teacher Exists...", Toast.LENGTH_SHORT).show();
+                    i.set(1);
+                }
+                else{
+                    Toast.makeText(context, "Teacher Does not Exist", Toast.LENGTH_SHORT).show();
+                    i.set(0);
+                }
+
+            }
+            else{
+                Toast.makeText(context, "Wrong Teacher_ID/Name/Phone...", Toast.LENGTH_SHORT).show();
                 i.set(0);
             }
         });
