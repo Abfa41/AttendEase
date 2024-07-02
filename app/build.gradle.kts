@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
 }
 
+apply(plugin = "realm-android")
+
 android {
     namespace = "com.example.attendease"
     compileSdk = 34
@@ -34,6 +36,7 @@ dependencies {
     implementation ("com.journeyapps:zxing-android-embedded:4.2.0")
 
     implementation ("io.realm:realm-gradle-plugin:10.18.0")
+
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("com.google.android.gms:play-services-wallet:19.4.0")
     implementation ("com.google.code.gson:gson:2.8.6")
