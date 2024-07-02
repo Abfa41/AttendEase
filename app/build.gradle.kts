@@ -37,8 +37,11 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("com.google.android.gms:play-services-wallet:19.4.0")
     implementation ("com.google.code.gson:gson:2.8.6")
-
-
+    implementation ("com.google.mlkit:barcode-scanning:16.1.2")
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation ("com.google.zxing:core:3.3.3")
+    implementation ("com.google.android.material:material:1.3.0")
+    implementation ("androidx.appcompat:appcompat:1.3.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

@@ -29,7 +29,7 @@ public class Home_Page_Teacher extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home_Page_Teacher.this,Create_QR.class));
-
+                finish();
             }
         });
 

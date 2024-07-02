@@ -18,15 +18,17 @@
         <activity
             android:name=".Home_Page_Teacher"
             android:exported="false" />
-        <activity
-            android:name=".ScannerActivity"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
+        <activity android:name=".CaptureAct"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
         <activity
             android:name=".Student_Login_Activity"
             android:exported="false" />
         <activity
             android:name=".qrcode_activity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Host_Login_Activity"

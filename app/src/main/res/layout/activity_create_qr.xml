@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.158" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/subjectName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -50,9 +50,9 @@
             android:inputType="text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.16" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -132,7 +132,7 @@
             android:text="Time"
             android:layout_margin="20dp"
             android:textStyle="bold"
-            android:textSize="24dp"
+            android:textSize="20dp"
             android:visibility="gone" />
 
     </LinearLayout>
