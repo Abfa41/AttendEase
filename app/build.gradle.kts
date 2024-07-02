@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+
+    id("realm-android")
 }
 
 apply(plugin = "realm-android")
@@ -28,7 +30,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+
 }
+
+realm {
+    isSyncEnabled = true
+}
+
+
 
 dependencies {
 
